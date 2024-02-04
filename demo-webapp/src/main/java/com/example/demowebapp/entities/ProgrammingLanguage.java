@@ -3,22 +3,24 @@ package com.example.demowebapp.entities;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDate;
+
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name="cars")
-public class Car {
+@Table(name="programming_languages")
+public class ProgrammingLanguage {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id = null;
     @Column(length=50, nullable=false)
-    private String modelName = "";
+    private String name = "";
 
+    @Column(length=50, nullable=true)
+    private LocalDate firstAppearance = null;
     @Column(length=50, nullable=false)
-    private String SerialNumber = "";
-    @Column(nullable=true)
-    private Double currentPrice = null;
+    private String inventor = null;
 }

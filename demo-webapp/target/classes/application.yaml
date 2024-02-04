@@ -9,3 +9,5 @@ spring:
     show_sql: true
     hibernate:
       ddl-auto: create-drop
+server:
+  port : 5050
