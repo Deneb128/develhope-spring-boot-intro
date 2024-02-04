@@ -25,7 +25,7 @@ public class ProgrammingLanguageController {
     }
 
     @PutMapping(path = "/changeinventor/{id}")
-    public ProgrammingLanguage getCarByID(@PathVariable Long id, @RequestParam(required = true) String inventor){
+    public ProgrammingLanguage updateInventorById(@PathVariable Long id, @RequestParam(required = true) String inventor){
         return programmingService.updateInventorById(id, inventor);
     }
 }
