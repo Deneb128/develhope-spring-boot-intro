@@ -31,11 +31,6 @@ public class CarController {
         return carService.getCarByID(id);
     }
 
-    @PutMapping(path = "/{id}")
-    public Car updateTypeFromId(@PathVariable Long id, @RequestParam(required = true)String type){
-        return carService.updateTypeFromId(id, type);
-    }
-
     @DeleteMapping(path = "/{id}")
     public ResponseEntity<?> deleteCar(@PathVariable Long id) {
         if(carService.getCarByID(id).getId() != null) {

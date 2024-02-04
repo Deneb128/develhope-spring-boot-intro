@@ -24,16 +24,6 @@ public class CarService {
         return carRepository.findById(id).orElse(new Car());
     }
 
-    public Car updateTypeFromId(Long id, String type){
-        if (carRepository.existsById(id)){
-            Car car = carRepository.findById(id).get();
-            car.setType(type);
-            return carRepository.saveAndFlush(car);
-        } else {
-            return new Car();
-        }
-    }
-
     public void deleteCar(Long id){
         carRepository.deleteById(id);
     }

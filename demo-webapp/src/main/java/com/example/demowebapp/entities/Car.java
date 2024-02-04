@@ -16,6 +16,9 @@ public class Car {
     private Long Id = null;
     @Column(length=50, nullable=false)
     private String modelName = "";
-    @Column(length=20, nullable=false)
-    private String type = "";
+
+    @Column(length=50, nullable=false)
+    private String SerialNumber = "";
+    @Column(nullable=true)
+    private Double currentPrice = null;
 }
