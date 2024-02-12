@@ -9,5 +9,17 @@ spring:
     show_sql: true
     hibernate:
       ddl-auto: create-drop
-server:
-  port : 5050
+
+---
+environment: test
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    username: root
+    password: test
+    driver-class-name: org.h2.Driver
+  jpa:
+    database: h2
+  h2:
+    console:
+      enabled: true
