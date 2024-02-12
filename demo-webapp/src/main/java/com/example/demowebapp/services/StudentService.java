@@ -15,8 +15,8 @@ public class StudentService {
     @Autowired
     private StudentRepository studentRepository;
 
-    public Student addNewStudent(Student programmingLanguage) {
-        return studentRepository.saveAndFlush(programmingLanguage);
+    public Student addNewStudent(Student student) {
+        return studentRepository.saveAndFlush(student);
     }
 
     public List getStudentList() {
