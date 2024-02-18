@@ -7,11 +7,11 @@ import org.springframework.web.bind.annotation.RestController;
 import java.time.Instant;
 
 @RestController
-@RequestMapping("/time")
+@RequestMapping("/")
 public class BasicController {
 
     @GetMapping
-    public String getTime(){
-        return "UTC Time: " + Instant.now();
+    public String hello(){
+        return "Hello";
     }
 }
